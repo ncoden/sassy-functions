@@ -1,7 +1,7 @@
 {
   "name": "sassy-functions",
   "version": "0.1.0",
-  "description": "The little toolbox to handle functions in all Sass versions",
+  "description": "🎉 The little toolbox to use functions across all Sass versions",
   "keywords": ["sass", "scss", "functions", "eyeglass-module"],
   "homepage": "https://github.com/ncoden/sassy-functions",
   "license": "MIT",

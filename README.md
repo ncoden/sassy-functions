@@ -1,15 +1,45 @@
 # sassy-functions
-> The little toolbox to handle functions in all Sass versions
+> 🎉 The little toolbox to use functions across all Sass versions
 
-## Install
+## 🤔 Why?
+
+In order to improve modular namespacing, Sass 4 will only accepts first-class functions as argument for call() so functions will be called in their own context. This allow developers to make their Sass packages more modular while still being able to call functions given by the user. As a first step, Sass 3.5 added `get-function()` to get a first-hand function from its name and throw a warning if a function name string is passed to call().
+
+We are now encouraged to use `get-function()`, but this would break our packages for older Sass versions. SassyFunctions is there to allow to to process first-hand functions and function name strings the same way and continue to support all Sass versions.
+
+## 👷 How to install
 
 ```sh
-$ npm install --save sassy-functions
+$ npm i -D sassy-functions
 ```
 
-## Usage
+Then in Sass:
+```scss
+@import '/path/to/node_modules/sassy-functions/scss/sassy-functions';
+```
 
-Work In Progress
+Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass-module)
+```scss
+@import 'sassy-functions';
+```
+
+## 👩‍💻 How to use
+
+```scss
+// Safely use any function reference or name coming from anywhere...
+@function count-to-10($callback) {
+  @for $i from 1 through 10 {
+    $_: sf-call($callback, $i);
+  }
+}
+
+@function display-number($n) {
+  @debug $n;
+}
+
+// ...Or safely pass your own function names to anywhere!
+$_: count-to-10(sf-get-function(display-number));
+```
 
 ## License
 
