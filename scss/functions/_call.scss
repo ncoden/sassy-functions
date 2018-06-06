@@ -1,0 +1,13 @@
+///
+/// Polyfill for the `call` function supporting both functions and strings.
+///
+/// @param {Function|String} $func - Function or name of the function to call
+/// @param {Arglist} $args... - Arguments to call the function with
+///
+/// @return {*}
+///
+@function sf-call($func, $args...) {
+  @if sf-assert-callable($func) {
+    @return call(sf-get-function($func), $args...);
+  }
+}

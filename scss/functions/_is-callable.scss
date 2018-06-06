@@ -1,0 +1,9 @@
+///
+/// Return if a given value is callable.
+///
+/// @param {*} $value - Value to test
+/// @return {Boolean}
+///
+@function sf-is-callable($value) {
+  @return type-of($value) == 'function' or (type-of($value) == 'string' and function-exists($value));
+}

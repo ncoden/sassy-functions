@@ -24,5 +24,6 @@
   },
   "devDependencies": {
     "sassdoc": "^2.5.0"
-  }
+  },
+  "sass": "scss/bootstrap.scss"
 }

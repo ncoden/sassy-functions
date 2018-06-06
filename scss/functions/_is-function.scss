@@ -1,0 +1,9 @@
+///
+/// Return if a given value is a function or a function name string.
+///
+/// @param {*} $value - Value to test
+/// @return {Boolean}
+///
+@function sf-is-function($value) {
+  @return type-of($value) == 'function' or type-of($value) == 'string';
+}
