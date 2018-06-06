@@ -27,18 +27,17 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 
 ```scss
 // Safely use any function reference or name coming from anywhere...
-@function count-to-10($callback) {
-  @for $i from 1 through 10 {
-    $_: sf-call($callback, $i);
+@function map($list, $func) {
+  $newlist: ();
+  @each $v in $list {
+    $newlist: append($newlist, sf-call($func, $v));
   }
-}
-
-@function display-number($n) {
-  @debug $n;
+  @return $newlist;
 }
 
 // ...Or safely pass your own function names to anywhere!
-$_: count-to-10(sf-get-function(display-number));
+$my-list: ('hello', 'word');
+$uppercased-list: map($my-list, sf-get-function(to-upper-case));
 ```
 
 ## License
