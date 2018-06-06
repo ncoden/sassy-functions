@@ -1,0 +1,21 @@
+///
+/// Return a reference to the given function or function name string compatible
+/// with the current Sass version.
+///
+/// * For Sass < 3.5, return the passed argument
+/// * For Sass >= 3.5, return a first-class function if a function name string
+///   was passed
+///
+/// @param {Function|String} -  $func - Function or name of the function
+/// @return {Function|String}   Function or name of the function following
+///                             the support of first-class functions.
+///
+@function sf-get-function($func) {
+  @if sf-assert-callable($func) {
+    @if function-exists('get-function') and type-of($func) == 'string' {
+      @return get-function($func);
+    } @else {
+      @return $func;
+    }
+  }
+}

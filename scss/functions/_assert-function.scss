@@ -1,0 +1,12 @@
+///
+/// Check if a given value is a function and throw an error otherwise
+///
+/// @param {*} $value - Value to check
+/// @return {Boolean}
+///
+@function sf-assert-function($value) {
+  @if sf-is-function($value) == false {
+    @error 'Assertion Error: expected a function, got #{$value} (#{type-of($value)}).';
+  }
+  @return true;
+}
