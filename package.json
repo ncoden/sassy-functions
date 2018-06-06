@@ -1,0 +1,28 @@
+{
+  "name": "sassy-functions",
+  "version": "0.1.0",
+  "description": "The little toolbox to handle functions in all Sass versions",
+  "homepage": "https://github.com/ncoden/sassy-functions",
+  "license": "MIT",
+  "author": {
+    "name": "Nicolas Coden",
+    "email": "nicolas@ncoden.fr",
+    "url": "https://ncoden.fr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ncoden/sassy-functions"
+  },
+  "bugs": {
+    "url": "https://github.com/ncoden/sassy-functions/issues"
+  },
+  "scripts": {
+    "docs": "sassdoc ./scss ./docs"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "sassdoc": "^2.5.0"
+  }
+}
