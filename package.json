@@ -18,7 +18,7 @@
     "url": "https://github.com/ncoden/sassy-functions/issues"
   },
   "scripts": {
-    "docs": "sassdoc ./scss ./docs"
+    "docs": "sassdoc ./scss -d ./docs"
   },
   "engines": {
     "node": ">=4"
