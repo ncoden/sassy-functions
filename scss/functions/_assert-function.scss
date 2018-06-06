@@ -5,7 +5,7 @@
 /// @return {Boolean}
 ///
 @function sf-assert-function($value) {
-  @if sf-is-callable($value) == false {
+  @if sf-is-function($value) == false {
     @error 'Assertion Error: expected a function, got #{$value} (#{type-of($value)}).';
   }
   @return true;
