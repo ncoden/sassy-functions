@@ -2,6 +2,7 @@
   "name": "sassy-functions",
   "version": "0.1.0",
   "description": "The little toolbox to handle functions in all Sass versions",
+  "keywords": ["sass", "scss", "functions", "eyeglass-module"],
   "homepage": "https://github.com/ncoden/sassy-functions",
   "license": "MIT",
   "author": {
@@ -25,5 +26,10 @@
   "devDependencies": {
     "sassdoc": "^2.5.0"
   },
-  "sass": "scss/bootstrap.scss"
+  "sass": "scss/bootstrap.scss",
+  "eyeglass": {
+    "sassDir": "scss",
+    "name": "sassy-functions",
+    "needs": ">=0.6.0"
+  }
 }
