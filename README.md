@@ -32,6 +32,8 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 
 ## 👩‍💻 How to use
 
+### Basic examples
+
 ```scss
 // Safely use any function reference or name coming from anywhere...
 @function map($list, $func) {
@@ -46,6 +48,28 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 $my-list: ('hello', 'word');
 $uppercased-list: map($my-list, sf-get-function(to-upper-case));
 ```
+
+### Functions
+
+* **`sf-is-function($value)`**
+  Return if a given value is a function name or reference.
+
+* **`sf-is-callable($value)`**
+  Return if a given value can be called.
+
+* **`sf-assert-function($value)`**
+  Check if a given value is a function name or reference and throw an error otherwise.
+
+* **`sf-assert-callable($value)`**
+  Check if a given value can be called and throw the appropriate error otherwise.
+
+* **`sf-get-function($func)`**
+  Return a reference to the given function or a function name string so it is callable in the current Sass version. For Sass < 3.5, return the passed argument. For Sass >= 3.5, return a function reference if a function name string was passed.
+
+* **`sf-call($func, $args...)`**
+  Polyfill for the `call` function supporting both function names and references.
+
+[See the full API documentation](https://ncoden.github.io/sassy-functions/docs)
 
 ## License
 
