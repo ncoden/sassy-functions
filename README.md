@@ -1,7 +1,7 @@
 <h1><p align="center">SassyFunctions</p></h1>
 
 <div align="center">
-  <a href="(https://github.com/ncoden/sassy-functions#how-to-install">Install</a> | <a href="(https://ncoden.github.io/sassy-functions/docs/">Documentation</a> | <a href="(https://ncoden.github.io/sassy-functions/">Website</a> | <a href="(https://github.com/ncoden/sassy-functions/releases">Releases</a>
+  <a href="https://github.com/ncoden/sassy-functions#-how-to-install">Install</a> | <a href="https://ncoden.github.io/sassy-functions/docs/">Documentation</a> | <a href="https://ncoden.github.io/sassy-functions/">Website</a> | <a href="https://github.com/ncoden/sassy-functions/releases">Releases</a>
 </div>
 
 <div align="center">
