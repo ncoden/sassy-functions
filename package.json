@@ -2,7 +2,12 @@
   "name": "sassy-functions",
   "version": "0.1.0",
   "description": "🎉 The little toolbox to use functions across all Sass versions",
-  "keywords": ["sass", "scss", "functions", "eyeglass-module"],
+  "keywords": [
+    "sass",
+    "scss",
+    "functions",
+    "eyeglass-module"
+  ],
   "homepage": "https://github.com/ncoden/sassy-functions",
   "license": "MIT",
   "author": {
@@ -18,7 +23,7 @@
     "url": "https://github.com/ncoden/sassy-functions/issues"
   },
   "scripts": {
-    "docs": "sassdoc ./scss -d ./docs"
+    "docs": "sassdoc ./scss"
   },
   "engines": {
     "node": ">=4"
