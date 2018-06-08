@@ -37,6 +37,8 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 @import 'sassy-functions';
 ```
 
+<br>
+
 ## 👩‍💻 How to use
 
 ### Basic examples
@@ -78,6 +80,15 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
 
 [See the full API documentation](https://ncoden.github.io/sassy-functions/docs)
 
-## License
+<br>
 
-MIT © [Nicolas Coden](https://github.com/ncoden)
+---
+
+<br>
+
+<div align="center">
+  Made with ❤️  in Paris
+
+  Copyright © 2018, [Nicolas Coden](https://github.com/ncoden).
+  Released under the [MIT license](https://github.com/ncoden/sassy-functions/blob/master/LICENSE).
+</div>
