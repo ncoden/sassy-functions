@@ -9,7 +9,7 @@ matrix:
 
 install:
   - yarn
-  - yarn add -g node-sass@$SASS_VERSIONS
+  - yarn global add node-sass@$SASS_VERSIONS
 script:
   - yarn run test
 
