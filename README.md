@@ -16,8 +16,8 @@ In order to improve modular namespacing, Sass 4 will only accepts first-class fu
 
 We are now encouraged to use `get-function()`, but this would break our packages for older Sass versions. SassyFunctions is there to allow to to process first-hand functions and function name strings the same way and continue to support all Sass versions.
 
-![Travis build status](https://img.shields.io/travis/ncoden/sassy-functions.svg)
-![devDependency update status](https://img.shields.io/david/dev/ncoden/sassy-functions.svg)
+[![Build Status](https://travis-ci.org/ncoden/sassy-functions.svg?branch=develop)](https://travis-ci.org/ncoden/sassy-functions)
+[![devDependencies Status](https://david-dm.org/ncoden/sassy-functions/dev-status.svg)](https://david-dm.org/ncoden/sassy-functions?type=dev)
 
 <br>
 
