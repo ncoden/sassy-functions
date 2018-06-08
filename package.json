@@ -23,12 +23,16 @@
     "url": "https://github.com/ncoden/sassy-functions/issues"
   },
   "scripts": {
+    "test": "mocha ./test",
     "docs": "sassdoc ./scss"
   },
   "engines": {
     "node": ">=4"
   },
   "devDependencies": {
+    "mocha": "^5.2.0",
+    "node-sass": "^4.9.0",
+    "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0"
   },
   "sass": "scss/bootstrap.scss",
