@@ -1,0 +1,22 @@
+@function _dummy-function() {
+  @return 'CALLED';
+}
+
+@include describe('sf-get-function [function]') {
+
+  @include it('returns something callable from a function name') {
+    $fn: sf-get-function(_dummy-function);
+    @include assert-equal(call($fn), 'CALLED');
+  }
+
+  // Skip first-class functions tests if they are not supported
+  @if function-exists('get-function') {
+
+    @include it('returns something callable from a function reference') {
+      $fn: sf-get-function(get-function('_dummy-function'));
+      @include assert-equal(call($fn), 'CALLED');
+    }
+
+  }
+
+}
