@@ -54,7 +54,7 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 }
 
 // ...Or safely pass your own function names to anywhere!
-$my-list: ('hello', 'word');
+$my-list: ('hello', 'world');
 $uppercased-list: map($my-list, sf-get-function(to-upper-case));
 ```
 
