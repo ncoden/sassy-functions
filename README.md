@@ -82,6 +82,23 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
 
 <br>
 
+## 👩‍🔬 Testing
+
+You can install SassyFunctions locally and test it with:
+```sh
+# Clone the repo
+git clone git@github.com:ncoden/sassy-functions.git
+cd sassy-functions
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+```
+
+<br>
+
 ---
 
 <br>
