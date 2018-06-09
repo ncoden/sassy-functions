@@ -12,9 +12,9 @@
 
 ## 🤔 Why?
 
-In order to improve modular namespacing, Sass 4 will only accepts first-class functions as argument for call() so functions will be called in their own context. This allow developers to make their Sass packages more modular while still being able to call functions given by the user. As a first step, Sass 3.5 added `get-function()` to get a first-hand function from its name and throw a warning if a function name string is passed to call().
+In order to improve modular namespacing, Sass 4 will only accept first-class functions as argument for `call()` so functions will be called in their own context. This allow developers to make their Sass packages more modular while still being able to call functions given by the user. As a first step, Sass 3.5 added `get-function()` to get a first-class function from its name and throw a warning if a function name string is passed to `call()`.
 
-We are now encouraged to use `get-function()`, but this would break our packages for older Sass versions. SassyFunctions is there to allow to to process first-hand functions and function name strings the same way and continue to support all Sass versions.
+We are now encouraged to use `get-function()`, but this would break our packages for older Sass versions. SassyFunctions is there to allow you to process first-hand functions and function name strings the same way and continue to support all Sass versions.
 
 [![Build Status](https://travis-ci.org/ncoden/sassy-functions.svg?branch=develop)](https://travis-ci.org/ncoden/sassy-functions)
 [![devDependencies Status](https://david-dm.org/ncoden/sassy-functions/dev-status.svg)](https://david-dm.org/ncoden/sassy-functions?type=dev)
