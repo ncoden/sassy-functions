@@ -5,7 +5,7 @@ dest: ./docs
 package:
   title: 'SassyFunctions'
   name: 'sassy-functions'
-  version: '0.1.0'
+  version: '0.2.0'
   homepage: 'https://github.com/ncoden/sassy-functions'
   license: 'MIT'
   description: '🎉 The little toolbox to use functions across all Sass versions'
