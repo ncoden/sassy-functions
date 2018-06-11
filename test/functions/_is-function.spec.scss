@@ -1,0 +1,22 @@
+@function _existing-function() {
+  @return true;
+}
+
+@include describe('sf-is-function [function]') {
+
+  @include it('returns true for function names and references') {
+    @include assert-equal(sf-is-function( rgb                       ), true);
+    @include assert-equal(sf-is-function( _existing-function        ), true);
+    @include assert-equal(sf-is-function( _non-existing-function    ), true);
+    @include assert-equal(sf-is-function( '_existing-function'      ), true);
+    @include assert-equal(sf-is-function( '_non-existing-function'  ), true);
+  }
+
+  @include it('returns false for everything else') {
+    @include assert-equal(sf-is-function( 0                         ), false);
+    @include assert-equal(sf-is-function( true                      ), false);
+    @include assert-equal(sf-is-function( ()                        ), false);
+    @include assert-equal(sf-is-function( (rgb, _existing-function) ), false);
+  }
+
+}

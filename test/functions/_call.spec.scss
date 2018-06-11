@@ -1,0 +1,20 @@
+@function _dummy-function() {
+  @return 'CALLED';
+}
+
+@include describe('sf-call [function]') {
+
+  @include it('calls the given function name') {
+    @include assert-equal(sf-call(_dummy-function), 'CALLED');
+  }
+
+  // Skip first-class functions tests if they are not supported
+  @if function-exists('get-function') {
+
+    @include it('calls the given function reference') {
+      @include assert-equal(sf-call(_dummy-function), 'CALLED');
+    }
+
+  }
+
+}

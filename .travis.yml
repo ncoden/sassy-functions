@@ -1,0 +1,22 @@
+language: node_js
+node_js: "stable"
+
+matrix:
+  include:
+  - env: SASS_VERSIONS=3
+  - env: SASS_VERSIONS=4.8
+  - env: SASS_VERSIONS=latest
+
+install:
+  - yarn
+  - yarn global add node-sass@$SASS_VERSIONS
+script:
+  - yarn run test
+
+cache:
+  bundler: true
+  directories:
+  - node_modules
+
+notifications:
+  email: false

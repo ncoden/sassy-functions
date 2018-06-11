@@ -1,0 +1,21 @@
+@function _existing-function() {
+  @return true;
+}
+
+@include describe('sf-is-callable [function]') {
+
+  @include it('returns true for callable function names and references') {
+    @include assert-equal(sf-is-callable( rgb                       ), true);
+    @include assert-equal(sf-is-callable( _existing-function        ), true);
+    @include assert-equal(sf-is-callable( '_existing-function'      ), true);
+  }
+
+  @include it('returns false for everything else') {
+    @include assert-equal(sf-is-callable( 0                         ), false);
+    @include assert-equal(sf-is-callable( true                      ), false);
+    @include assert-equal(sf-is-callable( ()                        ), false);
+    @include assert-equal(sf-is-callable( (rgb, _existing-function) ), false);
+    @include assert-equal(sf-is-callable( _non-existing-function    ), false);
+    @include assert-equal(sf-is-callable( '_non-existing-function'  ), false);
+  }
+}
