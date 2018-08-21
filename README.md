@@ -201,6 +201,6 @@ npm test
 <div align="center">
   Made with ❤️  in Paris
 
-  Copyright © 2018, [Nicolas Coden](https://github.com/ncoden).
-  Released under the [MIT license](https://github.com/ncoden/sassy-functions/blob/master/LICENSE).
+  Copyright © 2018, <a href="https://github.com/ncoden">Nicolas Coden</a>.
+  Released under the <a href="https://github.com/ncoden/sassy-functions/blob/master/LICENSE">MIT license</a>.
 </div>
