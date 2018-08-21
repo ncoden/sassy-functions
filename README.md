@@ -41,8 +41,6 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 
 ## 👩‍💻 How to use
 
-### Basic examples
-
 ```scss
 // Safely use any function reference or name coming from anywhere...
 @function map($list, $func) {
@@ -58,7 +56,9 @@ $my-list: ('hello', 'world');
 $uppercased-list: map($my-list, sf-get-function(to-upper-case));
 ```
 
-### Functions
+<br>
+
+## 📘 API
 
 * **`sf-is-function($value)`**
 
@@ -82,6 +82,7 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
   $res: sf-is-function(0);
   $res: sf-is-function(());
   ```
+  <br>
 
 * **`sf-is-callable($value)`**
 
@@ -105,6 +106,7 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
   // A function name that cannot be found
   $res: sf-is-function('xqxqqxhnxqh');
   ```
+  <br>
 
 * **`sf-assert-function($value)`**
 
@@ -118,6 +120,7 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
     // ...your code with $callback secured..
   }
   ```
+  <br>
 
 * **`sf-assert-callable($value)`**
 
@@ -134,6 +137,7 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
   ```
 
   If `$value` is not a function, it will throw an error with the appropriate message according to the Sass version used, with migration guidelines if relevant.
+  <br><br>
 
 * **`sf-get-function($func)`**
 
@@ -147,6 +151,7 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
     // ...your code with $safe-function secured..
   }
   ```
+  <br>
 
 * **`sf-call($func, $args...)`**
 
@@ -162,8 +167,13 @@ $uppercased-list: map($my-list, sf-get-function(to-upper-case));
     $res: sf-call($callback, $value);
   }
   ```
+  <br>
 
-[See the full API documentation](https://ncoden.github.io/sassy-functions/docs)
+  <div align="center">
+    <hr>
+    <a href="https://ncoden.github.io/sassy-functions/docs">📖 See the full API documentation</a>
+    <hr>
+  </div>
 
 <br>
 
