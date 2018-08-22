@@ -1,6 +1,6 @@
 ///
 /// Returns a properly formatted error message with
-/// - A prefix (see `$sl-error-prefix`)
+/// - A prefix (see `$sf-error-prefix`)
 /// - `$message` with its substitutions
 ///
 /// @access private
@@ -9,7 +9,7 @@
 /// @return {String} - Formatted message
 ///
 @function _sf-error-message($message, $args...) {
-  $prefix: _sf-str-substitute($sl-error-prefix, $args...);
+  $prefix: _sf-str-substitute($sf-error-prefix, $args...);
   $content: _sf-str-substitute($message, $args...);
   @return #{$prefix}#{$content};
 }
