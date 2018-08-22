@@ -5,13 +5,15 @@
 /// @return {Boolean}
 ///
 @function sf-assert-callable($value) {
+  $error-args: ($value, type-of($value));
+
   @if sf-is-callable($value) {
     @return true;
   } @else if (type-of($value) == 'string' and function-exists('get-function') == true) {
-    @error 'Assertion Error: function name string "#{$value}" cannot be found. You may need to use `get-function()` and first-class functions instead. See http://oddbird.net/2017/03/30/safe-get';
+    @error _sf-error-message($sf-error-function-not-found-get-function, $error-args...);
   } @else if (type-of($value) == 'string' and function-exists('get-function') == false) {
-    @error 'Assertion Error: function name string "#{$value}" cannot be found.';
+    @error _sf-error-message($sf-error-function-not-found, $error-args...);
   } @else {
-    @error 'Assertion Error: #{$value} (#{type-of($value)}) is not a function.';
+    @error _sf-error-message($sf-error-function-reference-invalid, $error-args...);
   }
 }

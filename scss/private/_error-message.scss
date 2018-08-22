@@ -1,0 +1,15 @@
+///
+/// Returns a properly formatted error message with
+/// - A prefix (see `$sf-error-prefix`)
+/// - `$message` with its substitutions
+///
+/// @access private
+/// @param {String} $message - Error message
+/// @param {Arglist} $search - Substitutes for the error message
+/// @return {String} - Formatted message
+///
+@function _sf-error-message($message, $args...) {
+  $prefix: _sf-str-substitute($sf-error-prefix, $args...);
+  $content: _sf-str-substitute($message, $args...);
+  @return #{$prefix}#{$content};
+}

@@ -6,7 +6,8 @@
 ///
 @function sf-assert-function($value) {
   @if sf-is-function($value) == false {
-    @error 'Assertion Error: expected a function, got #{$value} (#{type-of($value)}).';
+    $error-args: ($value, type-of($value));
+    @error _sf-error-message($sf-error-function-invalid, $error-args...);
   }
   @return true;
 }

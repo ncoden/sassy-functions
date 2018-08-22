@@ -1,0 +1,44 @@
+///
+/// Prefix for all the error messages
+/// @type String
+///
+$sf-error-prefix:
+  'Assertion Error: ' !default;
+
+///
+/// Error message for when a function name or reference is expected but
+/// an other value is received.
+/// @type String
+///
+$sf-error-function-invalid:
+  '$1 ($2) is not a function.' !default;
+
+///
+/// Error message for when a first-class function reference is expected but
+/// an other value is received.
+/// @type String
+///
+$sf-error-function-reference-invalid:
+  '$1 ($2) is not a function.' !default;
+
+///
+/// Error message for when a function name cannot be found and the
+/// `get-function` function is not availaible (Sass < 3.5).
+/// @type String
+///
+$sf-error-function-not-found:
+  'function name string "$1" cannot be found.' !default;
+
+///
+/// Error message for when a function name cannot be found and the
+/// `get-function` function is availaible (Sass >= 3.5).
+///
+/// It is recommended to promote first-class functions to the user for
+/// a better modularization and reusability of its project.
+///
+/// @type String
+///
+$sf-error-function-not-found-get-function:
+  'function name string "$1" cannot be found. You may need to use\
+  `get-function()` and first-class functions instead.\
+  See http://oddbird.net/2017/03/30/safe-get' !default;
