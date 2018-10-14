@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0 (14 October 2018)
+
+This release is the first stable version of SassyFunctions. It provides various bugfixes and an improved documentation.
+
+### All changes
+* 💻 b377c78 Update Lockfiles
+* 📖 adecb95 Fix badge links in README
+* 🐛 dfc1a59 Fix "pkg.sass" Sass entry
+* 📖 f82ec33 Add an "npm" badge to the README
+* 📖 5fa96cd Improve "How to use" section in the README
+
 ## 0.3.0 (22 August 2018)
 
 This release add settings to customize the error messages and improve the API documentation.
