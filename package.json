@@ -1,6 +1,6 @@
 {
   "name": "sassy-functions",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "🎉 The little toolbox to use functions across all Sass versions",
   "keywords": [
     "sass",
@@ -35,7 +35,7 @@
     "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0"
   },
-  "sass": "scss/bootstrap.scss",
+  "sass": "scss/sassy-functions.scss",
   "eyeglass": {
     "sassDir": "scss",
     "name": "sassy-functions",
