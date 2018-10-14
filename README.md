@@ -41,20 +41,30 @@ Or with [Eyeglass](https://github.com/sass-eyeglass/eyeglass#writing-an-eyeglass
 
 ## 👩‍💻 How to use
 
+**Package maintainers**, safely use any function reference or name coming from anywhere!
+
 ```scss
-// Safely use any function reference or name coming from anywhere...
-@function map($list, $func) {
+// Let's say you provide a "map-on-my-list" function to iterate with given function on a list...
+@function map-on-my-list($list, $func) {
   $newlist: ();
+
   @each $v in $list {
     $newlist: append($newlist, sf-call($func, $v));
   }
+  
   @return $newlist;
 }
-
-// ...Or safely pass your own function names to anywhere!
-$my-list: ('hello', 'world');
-$uppercased-list: map($my-list, sf-get-function(to-upper-case));
 ```
+
+**Package users**, safely pass your own function names to anywhere!
+
+```scss
+// Let's say you have a "to-upper-case" function and want to map a list on it...
+$my-list: ('hello', 'world');
+$uppercased-list: map-on-my-list($my-list, sf-get-function(to-upper-case));
+```
+
+✨ There is more! See the [API](#api) to discover all the functions of the SassyFunctions toolbox.
 
 <br>
 
