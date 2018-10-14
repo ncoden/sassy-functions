@@ -35,7 +35,7 @@
     "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0"
   },
-  "sass": "scss/bootstrap.scss",
+  "sass": "scss/sassy-functions.scss",
   "eyeglass": {
     "sassDir": "scss",
     "name": "sassy-functions",
